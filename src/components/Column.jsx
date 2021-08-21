@@ -7,7 +7,10 @@ const Column = ({column, tasks}) => {
     const Container = styled.div`
       margin: 10px;
       border-radius: 3px;
-      background-color: aliceblue;
+      background-color: #fff;
+      width: 230px;
+      display: flex;
+      flex-direction: column;
     `;
     const Title = styled.h3`
       padding: 8px;
@@ -16,6 +19,8 @@ const Column = ({column, tasks}) => {
       padding: 8px;
       transition: background-color .2s ease;
       background-color: ${props => (props.isDraggingOver ? 'skyblue' : 'white')};
+      flex-grow: 1;
+      min-height: 100px;
     `;
 
     return (
