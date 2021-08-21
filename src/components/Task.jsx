@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import {Draggable} from "react-beautiful-dnd";
 
-const Task = ({task, index, ...props}) => {
+const Task = ({task, index}) => {
     const Container = styled.div`
       padding: 5px 10px;
       margin-bottom: 4px;
@@ -11,7 +11,10 @@ const Task = ({task, index, ...props}) => {
     `;
 
     return (
-        <Draggable draggableId={task.id} index={index}>
+        <Draggable
+            draggableId={task.id}
+            index={index}
+        >
             {(provided, snapshot) => (
                 <Container
                     {...provided.draggableProps}
